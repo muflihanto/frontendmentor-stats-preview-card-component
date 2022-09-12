@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(233deg, 47%, 7%);
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: scroll;
+}
+.main-container .main {
+  background-color: hsl(244deg, 38%, 16%);
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 77.0833333333vw;
+  max-width: 1110px;
+  height: 446px;
+}
+@media (orientation: portrait) or (max-width: 375px) {
+  .main-container .main {
+    flex-direction: column;
+    width: calc(100vw - 50px);
+    max-width: 325px;
+    height: 780px;
+  }
+}
+.main-container .main figure {
+  position: relative;
+  background-blend-mode: multiply;
+  background: no-repeat center/cover hsl(277deg, 64%, 61%) url("./images/image-header-desktop.jpg");
+  flex: 540px;
+}
+@media (orientation: portrait) or (max-width: 375px) {
+  .main-container .main figure {
+    flex: unset;
+    height: 240px;
+    background: no-repeat center/cover hsl(277deg, 64%, 61%) url("./images/image-header-mobile.jpg");
+  }
+}
+.main-container .main article {
+  flex: 570px;
+  padding: 71px 71px 64px 71px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (orientation: portrait) or (max-width: 375px) {
+  .main-container .main article {
+    flex: 50%;
+    padding: 32px;
+    margin-top: 8px;
+    text-align: center;
+    height: 540px;
+  }
+}
+.main-container .main article h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+}
+@media (orientation: portrait) or (max-width: 375px) {
+  .main-container .main article h1 {
+    line-height: 32px;
+    font-size: 28px;
+  }
+}
+.main-container .main article h1 span {
+  color: hsl(277deg, 64%, 61%);
+}
+.main-container .main article p {
+  font-family: "Inter", sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-size: 15px;
+  line-height: 25px;
+  padding-right: 50px;
+  margin-top: -8px;
+}
+@media (orientation: portrait) or (max-width: 375px) {
+  .main-container .main article p {
+    margin-top: -24px;
+    padding-right: 0px;
+  }
+}
+.main-container .main article ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 64px;
+  margin-block: 41px 0px;
+}
+@media (orientation: portrait) or (max-width: 375px) {
+  .main-container .main article ul {
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 29px;
+    margin-block: 0px 5px;
+  }
+}
+.main-container .main article ul li {
+  list-style: none;
+}
+.main-container .main article ul li h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+}
+.main-container .main article ul li h3 {
+  margin-top: 7px;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  font-size: 10px;
+  text-align: center;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+}
+.attribution a {
+  color: hsl(277deg, 64%, 61%);
+  text-decoration: none;
+  font-weight: 700;
+}
+.attribution a:hover {
+  text-decoration: underline;
+  color: hsla(0deg, 0%, 100%, 0.6);
+}
+
+/*# sourceMappingURL=styles.css.map */
