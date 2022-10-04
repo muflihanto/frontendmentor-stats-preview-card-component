@@ -24,7 +24,19 @@
   <body>
     <div class="main-container">
       <main class="main">
-        <figure></figure>
+        <div class="header-image">
+          <div class="overlay"></div>
+          <picture>
+            <source
+              media="(orientation: portrait),(max-width: 375px)"
+              srcset="./images/image-header-mobile.jpg"
+            />
+            <img
+              src="./images/image-header-desktop.jpg"
+              alt="Image Header"
+            />
+          </picture>
+        </div>
         <article>
           <h1>Get <span> insights </span> that help your business grow.</h1>
           <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>

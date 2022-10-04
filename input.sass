@@ -4,6 +4,7 @@ $soft-violet: hsl(277, 64%, 61%)
 $white: hsl(0, 0%, 100%)
 $slightly-white-main: hsla(0, 0%, 100%, 0.75)
 $slightly-white-heading: hsla(0, 0%, 100%, 0.6)
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap')
 $font-inter: 'Inter', sans-serif
 $font-lexa: 'Lexend Deca', sans-serif
@@ -40,25 +41,39 @@ body
       max-width: 325px
       height: 780px
 
-    figure
+    .header-image
       position: relative
-      background-blend-mode: multiply
-      background: no-repeat center/cover $soft-violet url("./images/image-header-desktop.jpg")
-      flex: 540px
+      flex: calc(540 / 1100 * 100%)
+      overflow: hidden
       @media (orientation: portrait) or (max-width: 375px)
+        width: 100%
         flex: unset
         height: calc(240 / 780 * 780px)
-        background: no-repeat center/cover $soft-violet url("./images/image-header-mobile.jpg")
+      img
+        height: 100%
+        object-fit: cover
+      .overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: $soft-violet
+        opacity: .6
+        filter: brightness(.5) contrast(1.5) saturate(115%)
+        z-index: 2
 
     article
-      flex: 570px
+      flex: calc(570 / 1100 * 100%)
       padding: 71px 71px 64px 71px
       text-align: left
       display: flex
       flex-direction: column
       justify-content: space-between
       @media (orientation: portrait) or (max-width: 375px)
-        flex: 50%
+        width: 100%
         padding: 32px
         margin-top: 8px
         text-align: center
